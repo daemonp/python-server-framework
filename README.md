@@ -92,7 +92,9 @@ Click Save to apply the settings.
 - `.github/workflows/main.yml`: This is the GitHub Actions workflow that runs your tests, lints your Python files with pylint, and builds a Docker container for your application.
 - `Makefile`: This file contains commands for setting up a virtual environment, 
 
-## How does this all work?
+## Github Actions
+
+(read: How does this come together?)
 
 GitHub Actions is a workflow automation and continuous integration/continuous 
 deployment (CI/CD) platform provided by GitHub. It allows you to define custom 
