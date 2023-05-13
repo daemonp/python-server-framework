@@ -3,6 +3,84 @@
 This guide will walk you through the steps required to deploy your 
 Python application on a Kubernetes cluster in DigitalOcean.
 
+## Understanding Kubernetes, Deployments, and Services
+
+Kubernetes (often abbreviated as K8s) is an open-source platform 
+designed to automate deploying, scaling, and operating application 
+containers. It groups containers that make up an application into 
+logical units for easy management and discovery.
+
+With Kubernetes, you can build a containerized app and deploy it on 
+a cluster of physical or virtual machines, making your app highly 
+available and resilient to failures. Kubernetes also makes it easy 
+to scale your app up and down, depending on the demand.
+
+While K8s is a powerful and feature-rich platform, it can be 
+initially overwhelming due to its complexity. However, there are a 
+few fundamental constructs in Kubernetes that are relatively 
+straightforward and will quickly get you up and running. Concepts 
+such as Deployments, which manage the desired state of your 
+application, and Services, which provide networking and load 
+balancing capabilities, offer a solid foundation for managing 
+containerized applications. By focusing on these essential 
+components, you can leverage the power of Kubernetes while 
+gradually expanding your understanding and utilization of its more 
+advanced features. Starting with these basic constructs allows you 
+to build scalable and resilient applications without diving into 
+the intricacies of the entire Kubernetes ecosystem right from the 
+beginning.
+
+### Deployment
+
+In Kubernetes, a Deployment is a high-level concept that manages ReplicaSets, which in turn manage Pods. A Pod is the smallest and simplest unit in the Kubernetes object model that you create or deploy.
+
+A Deployment provides declarative updates for Pods and ReplicaSets. You describe a desired state in a Deployment, and the Deployment Controller changes the actual state to the desired state at a controlled rate. With Deployments, you can:
+
+- Create a Deployment to bring up a ReplicaSet and Pods.
+- Update a Deployment to roll out an updated version of the app.
+- Rollback to an earlier Deployment if the current version is not stable.
+- Scale a Deployment to facilitate more traffic.
+
+### Service
+
+A Kubernetes Service is an abstract way to expose an application 
+running on a set of Pods as a network service. The set of Pods 
+targeted by a Service is usually determined by a selector.
+
+Services enable the communication between different components 
+within and outside of the application. Kubernetes Services route 
+traffic to Pods, ReplicaSets, or other Services. They provide a 
+stable endpoint that other Pods can use to communicate.
+
+Services are also responsible for load balancing of traffic, which 
+is crucial for the high availability of applications.
+
+By creating a Deployment and a Service in Kubernetes, your 
+application becomes highly available and resilient to failures. If 
+a Pod fails, the Deployment will ensure that another Pod is 
+scheduled to replace it, and the Service will route traffic to the 
+healthy Pods.
+
+### KISS
+
+Maintaining simplicity and a clear understanding of Kubernetes is 
+crucial. While there are tools like Helm that aim to simplify 
+certain aspects of Kubernetes, it's important to approach them with 
+extreme caution. Helm provides a package manager-like experience 
+for deploying applications to Kubernetes, but it can introduce 
+additional complexity and dependencies. In some cases, relying 
+heavily on such tools can result in a loss of visibility and 
+control over the underlying infrastructure. It's vital to strike a 
+balance between simplicity and leveraging the full capabilities of 
+Kubernetes. Understanding the core concepts and building blocks of 
+Kubernetes allows for better troubleshooting, scalability, and 
+optimization. By keeping the system as simple and transparent as 
+possible, developers and operators can maintain a clearer 
+understanding of their applications, making it easier to manage and 
+debug any issues that may arise. So do your future self a favor and 
+stick to yaml manifests in a git repo :wink: 
+
+
 ## Prerequisites
 
 - A DigitalOcean account
@@ -42,9 +120,15 @@ mv /path/to/your/kubeconfig.yaml ~/.kube/
 export KUBECONFIG=~/.kube/kubeconfig.yaml
 ```
 
-You should be able to see your cluster at this point
+Note: You may want to add that export line to your local 
+environment i.e. ~/.bashrc
+
+
+Now you should be able to see your cluster at this point
+
 ```bash
 kubectl get nodes
+```
 
 ### 4. Create a Kubernetes Deployment
 
@@ -72,6 +156,7 @@ kubectl describe pod [pod name]
 kubectl logs [pod name]
 ```
 Should provide you with the pods details
+
 ```
  * Serving Flask app 'app' (lazy loading)
  * Environment: production
