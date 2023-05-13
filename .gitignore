@@ -1,0 +1,40 @@
+# .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+*~
+
+# Flask
+instance/
+.webassets-cache
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Logs
+logs
+*.log
+
+# Database
+*.db
+*.sqlite
+
+# Pytest
+.pytest_cache/
+
+# Docker
+Dockerfile
+*.dockerignore
+
+# J
+
