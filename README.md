@@ -85,8 +85,8 @@ Click Save to apply the settings.
 
 ## Project Structure
 
-- `app.py`: This is the main Python file that runs your Flask application.
-- `test_app.py`: This is where you would write tests for your Flask application.
+- `app.py`: This is the main Python file that runs your application.
+- `test_app.py`: This is where you would write tests for your application.
 - `requirements.txt`: This file contains the Python dependencies required for your application.
 - `Dockerfile`: This file is used to create a Docker container for your application.
 - `.github/workflows/main.yml`: This is the GitHub Actions workflow that runs your tests, lints your Python files with pylint, and builds a Docker container for your application.
