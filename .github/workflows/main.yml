@@ -45,4 +45,4 @@ jobs:
       with:
         context: .
         push: ${{ github.event_name != 'pull_request' }} # Don't push on PR
-        tags: ghcr.io/${{ github.repository }}:${{ github.sha }}
+        tags: user/app:latest,ghcr.io/${{ github.repository }}:${{ github.sha }}
