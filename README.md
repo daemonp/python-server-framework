@@ -120,3 +120,12 @@ docker run -p 5000:5000 myapp
 ```
 You should be able to visit http://localhost:5000 and see the app running
 
+
+# Deploying to the internet
+
+To set up a Kubernetes instance in DigitalOcean, you will first 
+need to create a Kubernetes cluster, then set up the kubectl 
+command-line tool to communicate with your cluster. After that, 
+you'll need to create a Kubernetes Deployment that uses your Docker 
+image. This process will be documented in a deployment.md file.
+
