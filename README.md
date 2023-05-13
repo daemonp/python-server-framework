@@ -117,11 +117,11 @@ source venv/bin/activate
 You can use the Makefile commands to install dependencies, run tests, and lint 
 the code. To do all of these, use the following command in your terminal:
 
-    - To setup the environment: `make install`
-    - To run the tests: `make test`
-    - To run the pylint: `make lint`
-    - To build the Docker image: `make docker-build`
-    - To run the Docker image: `make docker-run`
+* To setup the environment: `make install`
+* To run the tests: `make test`
+* To run the pylint: `make lint`
+* To build the Docker image: `make docker-build`
+* To run the Docker image: `make docker-run`
 
 ### Building and Running Docker Locally
 
