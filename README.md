@@ -167,7 +167,7 @@ the code. To do all of these, use the following command in your terminal:
 * To run the tests: `make test`
 * To run the pylint: `make lint`
 * To build the Docker image: `make docker-build`
-* To run the Docker image: `make docker-run`
+* To run the Docker image: `make run`
 
 ### Building and Running Docker Locally
 
