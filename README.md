@@ -11,13 +11,25 @@ designed to help you quickly integrate your Python application into a Git
 repository and automate the process of testing, linting, and building a Docker 
 container for your application.
 
+[What is docker?](https://opensource.com/resources/what-docker)
+
 ## Prerequisites
 
-Before you can use this template, you need to install Python, pip, virtualenv, Docker, and Make on your local machine. Here's how you can do this on Mac, Ubuntu, and Arch Linux:
+Before you can use this template, you need to install Python, pip, virtualenv, 
+Docker, and Make on your local machine. Here's how you can do this on Mac, 
+Ubuntu, and Arch Linux:
 
 ### Mac
 
 You can use Homebrew to install the necessary packages:
+
+To install `brew`
+```bash
+/bin/bash -c "$(curl -fsSL 
+https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Then on to installing the requirements
 
 ```bash
 brew install python3
@@ -36,6 +48,7 @@ that Docker is running, and accessible from a terminal.
 ### Linux
 
 #### Ubuntu
+
 You can use apt to install the necessary packages:
 ```bash
 sudo apt-get update
@@ -48,6 +61,7 @@ pip3 install virtualenv
 
 
 #### Arch
+
 ```bash
 sudo pacman -Syu
 sudo pacman -S python
