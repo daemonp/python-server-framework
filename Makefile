@@ -1,4 +1,4 @@
-.PHONY: install lint test docker-build docker-run all clean
+.PHONY: install lint test docker-build docker-run all clean venv
 
 VENV_NAME?=venv
 VENV_ACTIVATE=. $(VENV_NAME)/bin/activate
