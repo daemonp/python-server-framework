@@ -32,10 +32,5 @@ logs
 # Pytest
 .pytest_cache/
 
-# Docker
-Dockerfile
-*.dockerignore
-
-# J
-
+#Virtual Env
 venv/
