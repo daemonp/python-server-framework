@@ -92,6 +92,36 @@ Click Save to apply the settings.
 - `.github/workflows/main.yml`: This is the GitHub Actions workflow that runs your tests, lints your Python files with pylint, and builds a Docker container for your application.
 - `Makefile`: This file contains commands for setting up a virtual environment, 
 
+## How does this all work?
+
+GitHub Actions is a workflow automation and continuous integration/continuous 
+deployment (CI/CD) platform provided by GitHub. It allows you to define custom 
+workflows in your repository to automate various tasks, such as building, 
+testing, and deploying your code.
+
+In the context provided here, GitHub Actions is used to automatically lint and 
+test your Python application, as well as to create a Docker container and push 
+it to the GitHub Container Registry.
+
+Whenever a commit is pushed to GitHub, the configured GitHub Actions runner 
+triggers and executes the defined actions in your workflow. You can see the 
+updates and build results in the Actions page of your repository.
+
+The Actions page provides a detailed overview of your workflows and their 
+execution status. You can access it at the following URL: 
+https://github.com/daemonp/python-server-framework/actions
+
+On this page, you will find a list of all the workflows that have been 
+triggered by your commits. Each workflow is displayed with its name, status, 
+and the commit or event that triggered it.
+
+By clicking on a specific workflow run, you can dive into the details. The page 
+provides a chronological view of the executed steps and their outcomes. You can 
+inspect the logs of each step to see the output, including any error messages 
+or warnings that might have occurred during the workflow run.
+
+The Actions page also allows you to filter and search for specific workflow 
+runs, making it easy to navigate and locate the information you need.
 
 ## Usage
 
