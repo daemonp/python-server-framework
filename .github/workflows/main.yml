@@ -46,12 +46,6 @@ jobs:
         context: .
         push: true
         tags: ghcr.io/${{ github.repository }}:${{ github.sha }}
-    - name: Login to DockerHub
-      uses: docker/login-action@v2
-      with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
-
     - name: Login to Github Packages
       uses: docker/login-action@v2
       with:
@@ -59,7 +53,7 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
     
-    - name: Build image and push to Docker Hub and GitHub Container Registry
+    - name: Build image and push to GitHub Container Registry
       uses: docker/build-push-action@v2
       with:
         context: .
