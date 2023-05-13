@@ -21,5 +21,9 @@ docker-build: lint test
 docker-run:
 	docker run -p 5000:5000 myapp
 
-all: venv lint test docker
+all: venv lint test docker-build
+
+clean:
+	rm -rf $(VENV_NAME)
+	docker rmi myapp
 
