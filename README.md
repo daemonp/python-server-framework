@@ -13,11 +13,14 @@ container for your application.
 
 ## Project Structure
 
+
 - `app.py`: This is the main Python file that runs your Flask application.
 - `test_app.py`: This is where you would write tests for your Flask application.
 - `requirements.txt`: This file contains the Python dependencies required for your application.
 - `Dockerfile`: This file is used to create a Docker container for your application.
 - `.github/workflows/main.yml`: This is the GitHub Actions workflow that runs your tests, lints your Python files with pylint, and builds a Docker container for your application.
+- `Makefile`: This file contains commands for setting up a virtual environment, installing dependencies, running tests, and linting Python files.
+
 
 ## Usage
 
@@ -27,7 +30,29 @@ Replace the contents of `app.py` and `test_app.py` with your own Python
 application and tests. If your application requires additional Python packages, 
 add them to `requirements.txt`.
 
-### Building Locally
+### Setting Up a Virtual Environment
+
+This project uses a virtual environment (venv) for local development. To create 
+the venv and install the necessary Python packages, use the following command 
+in your terminal:
+
+```bash
+make venv
+source venv/bin/activate
+
+
+### Building and Testing Locally
+
+You can use the Makefile commands to install dependencies, run tests, and lint 
+the code. To do all of these, use the following command in your terminal:
+
+To setup the environment: `make install`
+To run the tests: `make test`
+To run the pylint: `make lint`
+To build the Docker image: `make docker-build`
+To run the Docker image: `make docker-run`
+
+### Building and Running Docker Locally
 
 To build and run the Docker container for your application locally, use:
 
