@@ -69,6 +69,19 @@ newgrp docker
 sudo systemctl enable docker
 sudo systemctl enable docker
 ```
+#### Github 
+
+On GitHub.com, navigate to the main page of the repository.
+
+Under your repository name, click  Settings. If you cannot see the 
+"Settings" tab, select the dropdown menu, then click Settings.
+
+In the left sidebar, click  Actions, then click General.
+
+Under "Workflow permissions", choose whether you want the GITHUB_TOKEN to have read and write access for all scopes, or just read access for the contents and packages scopes.
+
+Click Save to apply the settings.
+
 
 ## Project Structure
 
