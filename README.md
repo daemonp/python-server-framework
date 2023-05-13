@@ -127,5 +127,6 @@ To set up a Kubernetes instance in DigitalOcean, you will first
 need to create a Kubernetes cluster, then set up the kubectl 
 command-line tool to communicate with your cluster. After that, 
 you'll need to create a Kubernetes Deployment that uses your Docker 
-image. This process will be documented in a deployment.md file.
+image. This process will be documented in a 
+[deployment.md](deployment.md) file.
 
