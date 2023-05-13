@@ -10,7 +10,7 @@ venv:
 	${PYTHON} -m pip install -r requirements.txt
 
 lint: venv
-	${PYTHON} -m pylint --rcfile=.pylintrc **/*.py
+	${PYTHON} -m pylint --rcfile=.pylintrc *.py
 
 test: venv
 	${PYTHON} -m pytest
@@ -18,7 +18,7 @@ test: venv
 docker-build: lint test
 	docker build . -t myapp
 
-docker-run:
+run: docker-build
 	docker run -p 5000:5000 myapp
 
 all: venv lint test docker-build
