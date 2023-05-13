@@ -2,7 +2,6 @@
 Unit test for app.py
 """
 
-import pytest
 import app
 
 
