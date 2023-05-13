@@ -39,7 +39,7 @@ in your terminal:
 ```bash
 make venv
 source venv/bin/activate
-
+```
 
 ### Building and Testing Locally
 
